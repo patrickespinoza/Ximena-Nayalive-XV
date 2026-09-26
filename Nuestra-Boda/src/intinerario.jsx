@@ -1,4 +1,3 @@
-import Carousel from "./componentes-encabezado/carrusel";
 import Portada from "./componentes-encabezado/portada";
 import Contador from "./componentes-encabezado/Contador";
 import Celebracion from "./componentes-encabezado/Ubicacion";
@@ -23,8 +22,6 @@ export default function Intinerario() {
       <Itinerario/>
 
       <Dresscode />
-
-      <Carousel />
 
       <Regalos />
 
