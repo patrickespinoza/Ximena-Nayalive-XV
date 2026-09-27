@@ -9,7 +9,7 @@ export default function Confirmacion() {
   const [mensaje, setMensaje] = useState("");
   const [error, setError] = useState("");
 
-  const numeroWhatsApp = "525516061966";
+  const numeroWhatsApp = "525549566368";
 
   const enviarConfirmacion = (event) => {
     event.preventDefault();

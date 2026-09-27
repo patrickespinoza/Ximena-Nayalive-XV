@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function Portada() {
   // Cambia esta fecha cuando tengas la definitiva.
-  const fechaEvento = "26 · Septiembre · 2026";
+  const fechaEvento = "7 · Noviembre · 2026";
 
   return (
     <section

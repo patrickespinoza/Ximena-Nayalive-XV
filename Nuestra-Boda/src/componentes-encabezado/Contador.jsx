@@ -4,7 +4,7 @@ import { Crown, Sparkles } from "lucide-react";
 
 // Cambia aquí la fecha y hora definitivas.
 // Formato: AAAA-MM-DDTHH:mm:ss-06:00 (hora de Ciudad de México).
-const FECHA_EVENTO = "2026-09-26T23:59:00-06:00";
+const FECHA_EVENTO = "2026-11-07T15:45:00-00:00";
 
 const UNIDADES = ["Días", "Horas", "Minutos", "Segundos"];
 
