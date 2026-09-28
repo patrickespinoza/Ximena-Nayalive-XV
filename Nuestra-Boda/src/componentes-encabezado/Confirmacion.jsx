@@ -157,21 +157,24 @@ export default function Confirmacion() {
                 >
                   Número de invitados
                 </label>
-                <input
-                  id="numeroInvitados"
-                  type="number"
-                  min="1"
-                  step="1"
-                  inputMode="numeric"
-                  value={invitados}
-                  onChange={(event) => {
-                    setInvitados(event.target.value);
-                    setError("");
-                  }}
-                  placeholder="Ejemplo: 2"
-                  className={campo}
-                  required
-                />
+                <select
+  id="numeroInvitados"
+  value={invitados}
+  onChange={(event) => {
+    setInvitados(event.target.value);
+    setError("");
+  }}
+  className={campo}
+  required
+>
+  <option value="">Selecciona una opción</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+</select>
               </div>
             )}
 
