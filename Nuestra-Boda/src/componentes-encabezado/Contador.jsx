@@ -2,9 +2,8 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Crown, Sparkles } from "lucide-react";
 
-// Cambia aquí la fecha y hora definitivas.
-// Formato: AAAA-MM-DDTHH:mm:ss-06:00 (hora de Ciudad de México).
-const FECHA_EVENTO = "2026-11-07T15:45:00-00:00";
+// 7 de noviembre de 2026, 3:45 p. m., hora de Ciudad de México.
+const FECHA_EVENTO = "2026-11-07T15:45:00-06:00";
 
 const UNIDADES = ["Días", "Horas", "Minutos", "Segundos"];
 
@@ -45,27 +44,24 @@ export default function Contador({
   return (
     <section
       id="contador"
-      className="
-        contadorXV
-        relative
-        isolate
-        overflow-hidden
-        bg-[#302641]
-        px-5
-        py-20
-        text-[#EBDCD4]
-        sm:px-8
-        sm:py-28
-      "
-      style={{
-        backgroundImage:
-          "radial-gradient(ellipse at 15% 15%, rgba(125,107,156,0.38), transparent 45%), linear-gradient(145deg, #302641, #43304C 65%, #683E5D)",
-      }}
+      className="relative isolate overflow-hidden bg-[#302641] px-5 py-20 text-[#EBDCD4] sm:px-8 sm:py-28"
     >
-      <div className="pointer-events-none absolute inset-5 border border-[#C9AA85]/25 sm:inset-8" />
+      {/* Textura morada de fondo */}
+      <img
+        src="/fondom.jpg"
+        alt=""
+        aria-hidden="true"
+        loading="lazy"
+        className="absolute inset-0 h-full w-full object-cover object-center"
+      />
+
+      {/* Oscurece ligeramente la textura detrás del texto */}
+      <div className="absolute inset-0 bg-[#211B2D]/35" />
+
+      <div className="pointer-events-none absolute inset-5 border border-[#C9AA85]/45 sm:inset-8" />
 
       <motion.div
-        className="pointer-events-none absolute left-[7%] top-16 text-[#C9AA85]/70"
+        className="pointer-events-none absolute left-[7%] top-16 text-[#C9AA85]/80"
         animate={{ opacity: [0.3, 1, 0.3], scale: [0.85, 1.1, 0.85] }}
         transition={{ duration: 3, repeat: Infinity }}
       >
@@ -73,7 +69,7 @@ export default function Contador({
       </motion.div>
 
       <motion.div
-        className="pointer-events-none absolute bottom-16 right-[7%] text-[#C9AA85]/60"
+        className="pointer-events-none absolute bottom-16 right-[7%] text-[#C9AA85]/75"
         animate={{ opacity: [0.25, 0.85, 0.25] }}
         transition={{ duration: 3.5, repeat: Infinity }}
       >
@@ -87,19 +83,19 @@ export default function Contador({
           viewport={{ once: true, amount: 0.25 }}
           transition={{ duration: 0.7 }}
         >
-          <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full border border-[#C9AA85]/60 text-[#C9AA85]">
+          <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full border border-[#C9AA85]/70 bg-[#211B2D]/25 text-[#C9AA85]">
             <Crown size={30} strokeWidth={1.2} />
           </div>
 
-          <p className="mb-4 font-playfair text-xs uppercase tracking-[0.35em] text-[#C9AA85] sm:text-sm">
+          <p className="mb-4 font-playfair text-xs uppercase tracking-[0.35em] text-[#E8C9AA] sm:text-sm">
             Mis XV años
           </p>
 
-          <h2 className="font-cursiveDancing text-5xl leading-tight text-[#F3E5DF] sm:text-6xl md:text-7xl">
+          <h2 className="font-cursiveDancing text-5xl leading-tight text-[#F8EEE9] drop-shadow-[0_3px_12px_rgba(0,0,0,0.4)] sm:text-6xl md:text-7xl">
             {titulo}
           </h2>
 
-          <p className="mx-auto mt-7 max-w-2xl font-playfair text-lg leading-relaxed text-[#EBDCD4] sm:text-xl">
+          <p className="mx-auto mt-7 max-w-2xl font-playfair text-lg leading-relaxed text-[#F8EEE9] drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)] sm:text-xl">
             {texto}
           </p>
 
@@ -107,30 +103,30 @@ export default function Contador({
             className="mx-auto my-8 flex items-center justify-center gap-4 text-[#C9AA85]"
             aria-hidden="true"
           >
-            <span className="h-px w-14 bg-[#C9AA85]/60 sm:w-20" />
+            <span className="h-px w-14 bg-[#C9AA85]/75 sm:w-20" />
             <span>✦</span>
-            <span className="h-px w-14 bg-[#C9AA85]/60 sm:w-20" />
+            <span className="h-px w-14 bg-[#C9AA85]/75 sm:w-20" />
           </div>
 
-          <p className="font-cursiveDancing text-3xl text-[#C9AA85] sm:text-4xl">
+          <p className="font-cursiveDancing text-3xl text-[#E8C9AA] sm:text-4xl">
             {frase}
           </p>
         </motion.div>
 
         <motion.div
-          className="relative mx-auto mt-12 max-w-4xl border border-[#C9AA85]/60 bg-[#211B2D]/40 p-4 shadow-[0_22px_65px_rgba(15,10,25,0.25)] sm:mt-14 sm:p-7"
+          className="relative mx-auto mt-12 max-w-4xl border border-[#C9AA85]/70 bg-[#211B2D]/55 p-4 shadow-[0_22px_65px_rgba(15,10,25,0.3)] sm:mt-14 sm:p-7"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.7, delay: 0.1 }}
         >
-          <div className="pointer-events-none absolute inset-[6px] border border-[#C9AA85]/25" />
+          <div className="pointer-events-none absolute inset-[6px] border border-[#C9AA85]/30" />
 
           <div className="relative grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-5">
             {UNIDADES.map((etiqueta) => (
               <div
                 key={etiqueta}
-                className="flex min-h-36 flex-col items-center justify-center border border-[#C9AA85]/60 bg-[#EBDCD4] px-2 py-5 text-[#302641] sm:min-h-40"
+                className="flex min-h-36 flex-col items-center justify-center border border-[#C9AA85]/65 bg-[#EBDCD4] px-2 py-5 text-[#302641] sm:min-h-40"
               >
                 <span className="font-playfair text-4xl font-medium tabular-nums sm:text-5xl">
                   {String(tiempoRestante[etiqueta]).padStart(2, "0")}
