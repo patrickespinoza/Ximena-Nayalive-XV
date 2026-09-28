@@ -7,7 +7,7 @@ export default function Portada() {
   return (
     <section
       id="portada"
-      className="relative isolate flex  min-h-[100svh] w-full items-center justify-center overflow-hidden bg-[#302641] px-5 py-10 text-center text-[#F8EEE9] sm:px-10"
+      className="relative isolate flex min-h-[100svh] w-full items-center justify-center overflow-hidden bg-[#302641] px-5 py-10 text-center text-[#F8EEE9] sm:px-10"
     >
       {/* Fotografía de fondo */}
       <img
@@ -16,11 +16,7 @@ export default function Portada() {
         aria-hidden="true"
         className="absolute inset-0 h-full w-full object-cover object-center"
       />
-
-      {/* Sombra general para dar profundidad */}
-      <div className="absolute inset-0 bg-[#1B1425]/30" />
-
-      {/* Refuerzo de contraste en la zona del texto */}
+ {/* Refuerzo de contraste en la zona del texto */}
       <div
         className="absolute inset-0"
         style={{
@@ -28,14 +24,13 @@ export default function Portada() {
             "linear-gradient(to bottom, rgba(28,20,38,0.08) 0%, rgba(28,20,38,0.5) 32%, rgba(28,20,38,0.62) 70%, rgba(28,20,38,0.2) 100%)",
         }}
       />
-
       {/* Marcos */}
       <div className="pointer-events-none absolute inset-3 border border-[#EBDCD4]/65 sm:inset-5" />
       <div className="pointer-events-none absolute inset-[18px] border border-[#EBDCD4]/30 sm:inset-7" />
 
-      {/* Contenido central */}
+      {/* Texto directamente sobre la imagen */}
       <motion.div
-        className="relative z-10 mx-auto flex w-full max-w-2xl flex-col items-center border border-[#EBDCD4]/55 bg-[#211B2D]/60 px-5 py-9 shadow-[0_20px_70px_rgba(12,7,19,0.45)] backdrop-blur-[3px] sm:px-10 sm:py-12"
+        className="relative z-10 mx-auto flex w-full max-w-2xl flex-col items-center px-5 py-9 drop-shadow-[0_3px_10px_rgba(0,0,0,0.85)] sm:px-10 sm:py-12"
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, ease: "easeOut" }}
@@ -59,7 +54,7 @@ export default function Portada() {
 
         <div className="my-5 h-px w-20 bg-[#EBDCD4]/70 sm:my-7" />
 
-        <h1 className="font-cursiveDancing text-[clamp(3.5rem,12vw,6.5rem)] font-normal leading-[1.12] text-white drop-shadow-[0_3px_12px_rgba(0,0,0,0.6)]">
+        <h1 className="font-cursiveDancing text-[clamp(3.5rem,12vw,6.5rem)] font-normal leading-[1.12] text-white">
           Ximena Nayalive
         </h1>
 
