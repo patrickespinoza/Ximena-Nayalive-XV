@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Clock3, MapPin } from "lucide-react";
 
 export default function Celebracion({
-  hora = "5:430 p. m.",
+  hora = "5:30 p. m.",
   lugar = "Recepción", // Cambiar cuando tengas el nombre
   direccion = "Calle Miguel Hidalgo, El Arenal, San Cristóbal Nexquipayac, Atenco",
   ubicacion = "https://maps.app.goo.gl/KGNg2AeFBLscA9k3A",
